@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.runtime.IAdaptable"
+            id="org.sf.easyexplore.contribution">
+         <action
+               label="%action.label"
+               icon="icons/easyexplore.png"
+               class="org.sf.easyexplore.actions.EasyExploreAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.sf.easyexplore.actions.EasyExploreAction">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.sf.easyexplore.preferences.EasyExplorePreferencePage"
+            id="org.sf.asyexplore.preferences.EasyExplorePreferencePage"
+            name="%page.name">
+      </page>
+   </extension>
+
+</plugin>
